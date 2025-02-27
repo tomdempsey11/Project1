@@ -175,6 +175,155 @@ nav .auth .auth-btn {
 }
 
 
+/* MAIN SECTIONS */
+
+.banner-images {
+  text-align: center;       /* Center content within the section */
+  margin: 20px 0;           /* Spacing above and below the section */
+}
+
+.banner-images img {
+  display: block;           /* Ensure images are block-level so margin auto works */
+  margin: 20px auto;        /* Center images horizontally and add vertical spacing */
+  max-width: 100%;          /* Optional: ensures images don’t exceed container width */
+}
+
+
+.hands-on-teaching {
+  background: url('Project 1 Content/images/home-hands-on-teaching.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  min-height: 1000px; /* Ensures the section has enough height */
+}
+
+
+/*Hands on Teaching*/
+.hands-on-teaching .content-container {
+  width: 40%;      /* restricts the container to 50% of the page width */
+  margin: 0;       /* aligns the container flush with the left edge */
+  padding: 20px 20px 20px 100px;
+  color: rgb(46, 46, 46);
+  text-align: left;
+}
+
+
+.hands-on-teaching h1 {
+  margin-bottom: 2rem;
+  font-size: 30px;
+  font-family: 'Bodoni Moda', serif;
+}
+.hands-on-teaching h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hands-on-teaching p {
+  margin-bottom: 1rem;
+}
+
+.hands-on-teaching ul {
+  list-style-type: disc;
+  margin: 1rem auto;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Swim School Locations */
+.swim-school-locations {
+  position: relative;
+  overflow: hidden;
+  background: url('project 1 content/images/home-our-locations-bg.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  min-height: 900px; /* Adjust as needed for your design */
+  display: flex;
+  align-items: center;
+  text-align: center;  /* Centers text within the section */
+}
+
+.swim-school-locations::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Start at the middle of the container */
+  right: 0;  /* End at the right edge */
+  background: url('project 1 content/images/home-our-locations-map.png') no-repeat center right;
+  background-size: contain;
+  z-index: 2;
+}
+
+
+.swim-school-locations .content-container {
+  width: 40%;      /* restricts the container to 40% of the page width */
+  margin: 0;       /* aligns the container flush with the left edge */
+  padding: 20px 20px 20px 100px;
+  color: #fff;
+  text-align: left;
+}
+
+.swim-school-locations h1 {
+  margin-bottom: 2rem;
+  margin-top: -100px;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.swim-school-locations h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.swim-school-locations p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.swim-school-locations ul {
+  list-style-type: disc;
+  margin: 1rem auto;
+  padding-left: 20px;
+  text-align: left;
+}
+
+/* Awards */
+.awards {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.awards h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 50px;
+  font-family: 'Bodoni Moda', serif;
+  color: #333;
+}
+
+.awards .awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px;                           /* space between images */
+  max-width: 800px;                    /* restrict grid width */
+  margin: 0 auto;                      /* center the grid */
+  justify-items: center;               /* center images within each grid cell */
+}
+
+.awards .awards-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
 
 
 
