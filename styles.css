@@ -800,6 +800,70 @@ footer {
 }
 
 
+@media (max-width: 1199px) {
+  /* Hero Content: Prevent text from wrapping */
+  .hero-content-about {
+    white-space: nowrap;
+  }
+
+  /* Philosophy Section: Set content container width to 80% */
+  .philosophy .content-container {
+    width: 80%;
+  }
+
+  /* Good-Job Section: Set content container width to 70% */
+  .good-job .content-container {
+    width: 70%;
+  }
+
+  .philosophy .content-container h1,
+  .good-job .content-container h1 {
+    white-space: nowrap;
+  }
+
+  .good-job .content-container h1 {
+    white-space: nowrap;
+    font-size: clamp(24px, 5vw, 50px);
+  }
+
+}
+
+@media (max-width: 576px) {
+  /* Hero Content: Prevent text from wrapping */
+  .hero-content-about {
+    white-space: nowrap;
+  }
+
+  /* Philosophy Section: Set content container width to 80% */
+  .philosophy .content-container {
+    width: 80%;
+  }
+
+  /* Good-Job Section: Set content container width to 70% */
+  .good-job .content-container {
+    width: 70%;
+  }
+
+  /* Ensure h1 texts do not wrap */
+  .philosophy .content-container h1,
+  .good-job .content-container h1 {
+    white-space: nowrap;
+  }
+
+  /* Clamp font sizes for both sections */
+  .good-job .content-container h1 {
+    font-size: clamp(15px, 5vw, 50px);
+  }
+  
+  .philosophy .content-container h1 {
+    font-size: clamp(24px, 5vw, 50px);
+  }
+}
+
+
+
+
+
 
 /* SWIMMING LESSONS */
 #swimming-lessons header {
@@ -1051,6 +1115,38 @@ footer {
   width: 100px; /* adjust to your desired size */
   height: auto; /* keeps the aspect ratio */
 }
+
+@media (min-width: 577px) and (max-width: 1199px) {
+  .email-grid .grid-item button {
+    width: clamp(80px, 15vw, 150px);  /* Minimum 80px, fluid scaling at 15vw, maximum 150px */
+    height: clamp(80px, 15vw, 150px); /* Keep it square */
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .email-grid .grid-item button img {
+    width: 73%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+}
+
+
+@media (max-width: 576px) {
+  .contact-section .contact-message {
+    width: 80%;
+  }
+
+  .email-grid {
+    grid-template-columns: 1fr; /* Stacks each grid item in one column */
+  }
+}
+
 
 
 /* LOCATIONS DROPDOWN */
