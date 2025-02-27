@@ -178,6 +178,23 @@ nav .auth .auth-btn {
   margin: 0 5px;  /* 10px on left and right creates a 20px gap between buttons */
 }
 
+.buttons .btn {
+  background-color: #007BFF; /* Bright blue background */
+  color: #fff;               /* White text */
+  border-radius: 50px;        /* 4px rounded corners */
+  padding: 1.3rem 1.3rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 4rem auto 0;       /* 4rem top margin; auto left/right centers it */
+  display: block;            /* Make it block-level to allow margin auto to center it */
+  text-align: center;
+  width: 60%;
+}
+
+
+
 
 /* MAIN SECTIONS */
 
@@ -370,19 +387,20 @@ nav .auth .auth-btn {
     padding: 20px;
     text-align: center;
   }
-  .swim-school-locations .content-container h1{
-    font-size: 30px;
+  .swim-school-locations .content-container h1 {
+    font-size: clamp(20px, 4vw, 30px); /* scales between 20px and 30px */
     position: relative;
-    margin-top: -10rem;
+    margin-top: 0rem;
   }
-  .swim-school-locations .content-container h2{
-    font-size: 40px;
+  .swim-school-locations .content-container h2 {
+    font-size: clamp(24px, 5vw, 40px); /* scales between 24px and 40px */
     padding-top: 2rem;
   }
-  .swim-school-locations .content-container p{
-    font-size: 20px;
+  .swim-school-locations .content-container p {
+    font-size: clamp(16px, 3vw, 20px); /* scales between 16px and 20px */
     padding-top: 2rem;
   }
+  
   
   /* 5. Awards Section: Maintain 30px left/right margins */
   .awards {
@@ -426,7 +444,7 @@ nav .auth .auth-btn {
     background: none; /* Remove background image */
     display: flex;
     justify-content: center;
-    margin-top: -10rem;
+    margin-top: -5rem;
   }
   .hands-on-teaching .content-container {
     width: 90%;
@@ -449,16 +467,16 @@ nav .auth .auth-btn {
     text-align: center;
   }
   .swim-school-locations .content-container h1 {
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px); /* scales between 20px and 30px */
     position: relative;
-    margin-top: -10rem;
+    margin-top: 0rem;
   }
   .swim-school-locations .content-container h2 {
-    font-size: 40px;
+    font-size: clamp(24px, 5vw, 40px); /* scales between 24px and 40px */
     padding-top: 2rem;
   }
   .swim-school-locations .content-container p {
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px); /* scales between 16px and 20px */
     padding-top: 2rem;
   }
   
