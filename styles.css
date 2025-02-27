@@ -17,6 +17,8 @@ body {
   padding: 0;
 }
 
+
+
   
 /* Navigation Bar Styles */
 nav {
@@ -63,6 +65,8 @@ nav ul li a {
   white-space: nowrap;
   padding: 0 0.5rem;
 }
+
+
 
 /* Default for mobile/collapsed for auth */
 nav .auth {
@@ -302,7 +306,7 @@ nav .auth .auth-btn {
 
 .awards h1 {
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-size: 50px;
   font-family: 'Bodoni Moda', serif;
   color: #333;
@@ -312,7 +316,7 @@ nav .auth .auth-btn {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px;                           /* space between images */
-  max-width: 800px;                    /* restrict grid width */
+  max-width: 700px;                    /* restrict grid width */
   margin: 0 auto;                      /* center the grid */
   justify-items: center;               /* center images within each grid cell */
 }
@@ -322,6 +326,159 @@ nav .auth .auth-btn {
   height: auto;
   object-fit: contain;
 }
+
+@media (min-width: 577px) and (max-width: 1199px) {
+  #home header {
+    height: 70vh;
+  }
+  /* 1. Hero Content: Prevent text from wrapping */
+  .hero-content {
+    white-space: nowrap;
+  }
+  
+  /* 2. Banner Images: Set width to 90% so there’s margin on the sides */
+  .banner-images img {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  /* 3. Hands-on-teaching Section: Remove background and center content */
+  .hands-on-teaching {
+    background: none; /* Remove background image */
+    display: flex;
+    justify-content: center;
+    margin-top: -10rem;
+  }
+  .hands-on-teaching .content-container {
+    width: 90%;       /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;    /* Adjust padding if desired */
+    text-align: left;
+  }
+  
+  /* 4. Swim-School-Locations Section: Remove extra background and center content */
+  .swim-school-locations{
+    min-height: 600px;
+  }
+
+  .swim-school-locations::before {
+    display: none; /* Remove the extra background (the map image) */
+  }
+  .swim-school-locations .content-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .swim-school-locations .content-container h1{
+    font-size: 30px;
+    position: relative;
+    margin-top: -10rem;
+  }
+  .swim-school-locations .content-container h2{
+    font-size: 40px;
+    padding-top: 2rem;
+  }
+  .swim-school-locations .content-container p{
+    font-size: 20px;
+    padding-top: 2rem;
+  }
+  
+  /* 5. Awards Section: Maintain 30px left/right margins */
+  .awards {
+    padding: 40px 30px; /* 40px top/bottom, 30px left/right */
+  }
+  /* If you want the grid itself to also have margins, you can adjust: */
+  .awards .awards-grid {
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  #home header {
+    height: 60vh;
+  }
+  /* 1. Hero Content: Reduce font size and stack buttons */
+  .hero-content {
+    font-size: 18px; /* Adjust as needed for smaller text */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  .hero-content .btn {
+    display: block;
+    width: 60%;
+    margin: 0.5rem auto; /* Space between stacked buttons */
+  }
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  
+  /* 2. Banner Images: Same as 577-1199px */
+  .banner-images img {
+    width: 90%;
+    margin: 20px auto;
+  }
+  
+  /* 3. Hands-on-teaching Section: Remove background and center content */
+  .hands-on-teaching {
+    background: none; /* Remove background image */
+    display: flex;
+    justify-content: center;
+    margin-top: -10rem;
+  }
+  .hands-on-teaching .content-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  /* 4. Swim-School-Locations Section: Remove extra background and center content */
+  .swim-school-locations {
+    min-height: 600px;
+  }
+  .swim-school-locations::before {
+    display: none; /* Remove the extra background (the map image) */
+  }
+  .swim-school-locations .content-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .swim-school-locations .content-container h1 {
+    font-size: 30px;
+    position: relative;
+    margin-top: -10rem;
+  }
+  .swim-school-locations .content-container h2 {
+    font-size: 40px;
+    padding-top: 2rem;
+  }
+  .swim-school-locations .content-container p {
+    font-size: 20px;
+    padding-top: 2rem;
+  }
+  
+  /* 5. Awards Section: Stack awards vertically */
+  .awards {
+    padding: 40px 30px; /* 40px top/bottom, 30px left/right */
+  }
+  .awards h1 {
+    font-size: 30px;
+  }
+  .awards .awards-grid {
+    grid-template-columns: 1fr; /* Stack each award on its own row */
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 60%;
+  }
+}
+
+
+
 
 
 
@@ -540,6 +697,482 @@ footer {
 
   .footer-bottom {
     text-align: center;
+  }
+}
+
+
+
+
+/* ABOUT */ 
+#about header {
+  background-image: url('project 1 content/images/about-us-hero.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+}
+
+/* Style the hero content to be centered */
+.hero-content-about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.hero-content-about h1 {
+  line-height: 0.8;
+  font-size: 50px;
+}
+
+.philosophy {
+  background: url('Project 1 Content/images/about-our-philosophy-bg.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 40px 0;
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  min-height: 400px;
+}
+
+.philosophy .content-container {
+  width: 40%;      /* restricts the container to 40% of the page width */
+  margin: 0 auto;       /* aligns the container flush with the left edge */
+  color:#333;
+  text-align: center;
+}
+
+.philosophy h1 {
+
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.philosophy h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.philosophy p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+.good-job {
+  background: url('Project 1 Content/images/about-we-do-a-pretty-good-job-bg.jpeg') no-repeat top center;
+  background-size: cover;
+  padding: 40px 0;
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  min-height: 500px;
+}
+
+.good-job .content-container {
+  width: 45%;      /* restricts the container to 40% of the page width */
+  margin: 0 auto;       /* aligns the container flush with the left edge */
+  color:#333;
+  text-align: center;
+}
+
+.good-job h1 {
+  margin-top: 0px;
+  margin-bottom: 2rem;
+
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+}
+
+.good-job p {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+
+
+/* SWIMMING LESSONS */
+#swimming-lessons header {
+  background-image: url('project 1 content/images/which-lesson-is-best.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+}
+
+/* Style the hero content to be centered */
+.hero-content-swimming-lessons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.lesson-types {
+  padding: 40px 0;
+  background: #f8f8f8; /* Optional background color */
+}
+
+.lesson-types .content-container {
+  width: 70%;           /* Restrict container width */
+  margin: 0 auto;       /* Center the container horizontally */
+  padding: 20px;
+  text-align: left;
+  color: #333;
+}
+
+.lesson-types h1 {
+  margin-bottom: 6rem;
+  font-size: 30px;
+  font-family: 'Bodoni Moda', serif;
+  text-align: center;
+}
+
+.lesson-types .lesson h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  /* h2 is bold by default, so additional styling for bold is optional */
+}
+
+.lesson-types .lesson p {
+  margin-bottom: 1rem;
+}
+
+.lesson-types .lesson .learn-more {
+  color: #51a5ff; /* Optional: style the 'Learn more' as a link color */
+  cursor: pointer; /* Indicates it's clickable, if desired */
+}
+
+
+
+
+/* SWIM PROGRAMS */
+#swim-programs header {
+  background-image: url('project 1 content/images/summer-swim-camps.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+}
+
+/* Style the hero content to be centered */
+.hero-content-swim-programs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.summer-swim-camps {
+  padding: 60px 0;
+  background: #ffffff; /* Optional background color; change as needed */
+  text-align: center;
+}
+
+.summer-swim-camps .content-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+  color: #333;
+}
+
+/* Style the main heading */
+.summer-swim-camps h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'Bodoni Moda', serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Style the sub-heading */
+.summer-swim-camps h2 {
+  font-size: 36px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Bodoni Moda', serif;
+  text-align: center;
+}
+
+/* Paragraph styling */
+.summer-swim-camps p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+/* Style the location list */
+.summer-swim-camps ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.summer-swim-camps ul li {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+
+
+
+/* ADULT PROGRAMS */
+#adult-programs header {
+  background-image: url('project 1 content/images/lap-swimming.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 450px;
+}
+
+/* Style the hero content to be centered */
+.hero-content-adult-programs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+
+
+
+/*CONTACT US*/
+#contact header {
+  background-image: url('project 1 content/images/about-us-hero.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+}
+
+/* Style the hero content to be centered */
+.hero-content-contact {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.contact-section .contact-message {
+  text-align: center;
+  margin: 20px auto;  /* 20px top and bottom, auto on sides centers the element */
+  max-width: 600px;   /* Limits the width to 600px */
+  font-size: 18px;
+  color: #333;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+
+/* Grid container for the email buttons */
+.email-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for a 2x4 grid */
+  grid-gap: 20px;
+  row-gap: 60px;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto;   /* Center the grid container */
+  margin-bottom: 40px;
+}
+
+/* Each grid item */
+.email-grid .grid-item {
+  text-align: center;
+}
+
+/* The square button */
+.email-grid .grid-item button {
+  width: 150px;  /* Set a fixed width */
+  height: 150px; /* Ensures the button is square */
+  border: none;
+  background-color: #ffffff; /* Example color; adjust as needed */
+  cursor: pointer;
+  border-radius: 8px;  /* Optional: gives rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* horizontal offset, vertical offset, blur, color */
+}
+
+/* The label below each button */
+.email-grid .grid-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.email-grid .grid-item button img {
+  width: 100px; /* adjust to your desired size */
+  height: auto; /* keeps the aspect ratio */
+}
+
+
+/* LOCATIONS DROPDOWN */
+/* LOCATIONS DROPDOWN */
+
+/* 1. Overall dropdown menu styling */
+.navbar .dropdown-menu {
+  position: fixed !important;
+  top: 65px; /* Adjust as needed for your navbar */
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 80vw !important;
+  right: auto !important;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+
+/* Show dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown .dropdown-menu:hover {
+  display: block !important;
+}
+
+/* Multi-column layout for dropdown content */
+.dropdown-columns {
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+/* Prevent breaking of group elements between columns */
+.dropdown-columns h6,
+.dropdown-columns a,
+.dropdown-columns .dropdown-divider {
+  break-inside: avoid;
+}
+
+/* Other styling for headers, items, etc. */
+.navbar .dropdown-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1A2E38;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.navbar .dropdown-item {
+  color: #66B2FF !important;
+  padding: 0.25rem 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #1A2E38;
+}
+
+.navbar .dropdown-divider {
+  margin: 0.25rem 0;
+  border-color: #ccc;
+}
+
+.nav-item.dropdown:hover > .nav-link {
+  background-color: #ffffff;
+  color: #333 !important;
+  border-radius: 0px;
+}
+
+/* For screens 1200px and up: force specific column breaks */
+@media (min-width: 1200px) {
+  .dropdown-columns {
+    column-count: 3;
+    column-gap: 1rem;
+  }
+  
+  /* Force a column break after the 3rd header and after the 5th header */
+  .dropdown-columns .dropdown-divider:nth-of-type(3),
+  .dropdown-columns .dropdown-divider:nth-of-type(5) {
+    break-after: column;
+  }
+  
+  /* Ensure individual elements don't break between columns */
+  .dropdown-columns h6,
+  .dropdown-columns .dropdown-item,
+  .dropdown-columns .dropdown-divider {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navbar .dropdown-menu {
+    position: relative !important;  /* Let it flow within the menu */
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;         /* Use full available width */
+    box-shadow: none;               /* Optionally remove the fixed shadow */
+    padding: 1rem;                  /* Adjust padding as needed */
+    height: 500px;
+    padding-top: 2rem;
+    margin-top: -2px;
+  }
+
+  /* Two-column layout for dropdown content */
+  .dropdown-columns {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+
+  /* Force a column break after the 4th group (assuming the 4th divider marks the end of column 1) */
+  .dropdown-columns .dropdown-divider:nth-of-type(4) {
+    break-after: column;
+  }
+
+  /* Prevent breaking of group elements between columns */
+  .dropdown-columns h6,
+  .dropdown-columns .dropdown-item,
+  .dropdown-columns .dropdown-divider {
+    break-inside: avoid;
   }
 }
 
