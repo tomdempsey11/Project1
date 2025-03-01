@@ -193,6 +193,13 @@ nav .auth .auth-btn {
   width: 60%;
 }
 
+@media screen and (max-width: 600px) {
+  .buttons .btn {
+    width: 70%; /* Expand button width to 80% */
+  }
+}
+
+
 
 
 
@@ -683,7 +690,9 @@ footer {
   .footer-nav {
     justify-content: center;
     align-items: center;
-    padding-left: 0; /* remove extra left padding */
+    padding-left: clamp(0px, 2vw, 10px); /* Remove extra left padding dynamically */
+    font-size: clamp(1px, 1vw, 20px); /* Adjust font size */
+    gap: clamp(0.05rem, 2vw, 1rem); /* Adjust spacing between nav items */
   }
   
   .footer-social {
@@ -826,7 +835,7 @@ footer {
 
   /* Philosophy Section: Set content container width to 80% */
   .philosophy .content-container {
-    width: 80%;
+    width: 70%;
   }
 
   /* Good-Job Section: Set content container width to 70% */
@@ -913,7 +922,7 @@ footer {
 }
 
 .lesson-types .content-container {
-  width: 70%;           /* Restrict container width */
+  width: 80%;           /* Restrict container width */
   margin: 0 auto;       /* Center the container horizontally */
   padding: 20px;
   text-align: left;
@@ -943,6 +952,18 @@ footer {
   color: #51a5ff; /* Optional: style the 'Learn more' as a link color */
   cursor: pointer; /* Indicates it's clickable, if desired */
 }
+
+
+@media screen and (max-width: 1199px) {
+  .hero-content-swimming-lessons h1{
+    font-size: clamp(15px, 5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
 
 
 
@@ -978,7 +999,7 @@ footer {
 }
 
 .summer-swim-camps .content-container {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
   text-align: left;
@@ -1029,6 +1050,15 @@ footer {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1199px) {
+  .hero-content-swim-programs h1{
+    font-size: clamp(15px, 5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 
 
 
@@ -1054,6 +1084,15 @@ footer {
   font-weight: 900;
   font-size: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-content-adult-programs h1{
+    font-size: clamp(15px, 5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 
@@ -1150,6 +1189,13 @@ footer {
     display: block;
     margin: 0 auto;
   }
+  .hero-content-contact h1{
+    font-size: clamp(15px, 5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   
   
 }
@@ -1162,6 +1208,13 @@ footer {
 
   .email-grid {
     grid-template-columns: 1fr; /* Stacks each grid item in one column */
+  }
+
+  .hero-content-contact h1{
+    font-size: clamp(15px, 5vw, 50px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -1257,6 +1310,9 @@ footer {
   }
 }
 
+
+
+
 @media (max-width: 1199px) {
   .navbar .dropdown-menu {
     position: relative !important;  /* Let it flow within the menu */
@@ -1266,7 +1322,7 @@ footer {
     width: 100% !important;         /* Use full available width */
     box-shadow: none;               /* Optionally remove the fixed shadow */
     padding: 1rem;                  /* Adjust padding as needed */
-    height: 500px;
+    height: 580px;
     padding-top: 2rem;
     margin-top: -2px;
   }
@@ -1290,5 +1346,216 @@ footer {
   }
 }
 
+@media (max-width: 776px) {
+  .navbar .dropdown-menu {
+    position: relative !important;  /* Keep it out of the flow */
+    top: 65px;                      /* Adjust as needed */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1rem;
+    height: auto; /* Let it size based on its content */
+  }
+  
+  .dropdown-columns {
+    column-count: 2;         /* Or 1 if you prefer */
+    column-gap: 0.5rem;       /* Reduced gap */
+    column-width: 100px;      /* Force columns to a specific width */
+  }
+  .navbar .dropdown-item {
+    display: block; /* Ensures full-width inside column */
+    font-size: 10px; /* Default size */
+    padding: 0.25rem 1rem; /* Default padding */
+    white-space: normal; /* Allow text to wrap */
+  }
+  .navbar .dropdown-header {
+    font-size: clamp(0.85rem, 2.5vw, 1rem); /* Dynamically adjusts */
+    font-weight: 600;
+    color: #1A2E38;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+}
 
+
+
+
+
+
+
+
+/* SIGN IN PAGE */
+/* Style the body for the sign-in page */
+body#sign-in-page {
+  background-color: #f5f5f5;  /* Light gray background */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;  /* Stack children vertically */
+  align-items: center;     /* Center horizontally */
+  justify-content: flex-start;  /* Start at the top */
+  min-height: 100vh;       /* Full viewport height */
+  padding-top: 20px;       /* Optional: add some top spacing */
+}
+
+
+/* Container for the entire sign-in card */
+.sign-in-container {
+  position: relative;  /* So the mascot can be positioned relative to it */
+  width: 450px;        /* Adjust to your preference */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+  text-align: center;
+}
+
+/* Fish Mascot (optional) */
+.fish-mascot {
+  position: absolute;
+  top: -25px;
+  left: -66px;        /* Adjust so the fish peeks out from the left */
+  width: 120px;       /* Adjust size as needed */
+}
+
+/* Center the Splashes logo at the top */
+.splashes-logo {
+  display: block;
+  margin: 40px auto 20px; /* top, left/right auto, bottom spacing */
+  width: 180px; /* adjust as needed */
+}
+
+
+/* Form container and heading */
+.form-container {
+  margin-top: 1rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.form-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Labels and inputs */
+.form-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+}
+
+.form-container input {
+  width: 94%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #51a5ff;
+  font-size: 0.9rem;
+}
+
+/* Button row */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn-signin, 
+.btn-signup {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 50px;
+  border: 2px solid #51a5ff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Primary Sign In Button */
+.btn-signin {
+  background-color: #51a5ff;
+  color: #fff;
+}
+
+/* Outline Sign Up Button */
+.btn-signup {
+  background-color: transparent;
+  color: #51a5ff;
+}
+
+/* Hover effects (optional) */
+.btn-signin:hover {
+  background-color: #2f8ae5; /* Slightly darker */
+}
+
+.btn-signup:hover {
+  background-color: #51a5ff;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .button-row {
+    flex-direction: column;
+  }
+  
+  .button-row button {
+    width: 100%;
+    margin-bottom: 0rem;
+    font-size: clamp(0.85rem, 2.5vw, 1rem); /* Shrinks text dynamically */
+    padding: clamp(0.5rem, 2vw, 1rem); /* Adjusts button padding */
+  }
+
+  /* Remove the bottom margin from the last button */
+  .button-row button:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Make the sign-in container shrink */
+  .sign-in-container {
+    max-width: clamp(100px, 60vw, 400px); /* Shrinks container as needed */
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+
+  /* Make input fields shrink */
+  .sign-in-input {
+    width: 100%;
+    font-size: clamp(0.85rem, 2.5vw, 1rem); /* Adjust text size */
+    padding: clamp(0.4rem, 1.5vw, 0.75rem); /* Adjust padding */
+  }
+
+  /* Adjust heading size */
+  .sign-in-title {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    text-align: center; /* Keep centered on small screens */
+  }
+
+  /* Reduce spacing between elements */
+  .sign-in-form {
+    gap: clamp(0.5rem, 2vw, 1rem); /* Adjust spacing dynamically */
+  }
+}
 
